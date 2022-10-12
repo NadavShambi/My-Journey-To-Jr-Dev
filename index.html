@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>touch-nums</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="onInit()">
+    <header>
+      <div class="choose-level">
+        <h2>Choose Your Level:</h2>
+        <form action="get">
+          <label>
+            <input type="radio" name="mode" onclick="onMode(this)" data-r="2" />
+            Baby
+          </label>
+          <label>
+            <input type="radio" name="mode" onclick="onMode(this)" data-r="4" />
+            Easy
+          </label>
+          <label>
+            <input type="radio" name="mode" onclick="onMode(this)" data-r="5" />
+            Hard
+          </label>
+          <label>
+            <input type="radio" name="mode" onclick="onMode(this)" data-r="6" />
+            Expert
+          </label>
+          <label>
+            <input type="radio" name="mode" onclick="onMode(this)" data-r="8" />
+            Pro
+          </label>
+        </form>
+      </div>
+      <div class="timer">Time: <span>00:00</span></div>
+      <div class="counter">Next Number: <span>1</span></div>
+    </header>
+    <div class="game-table"></div>
+    <div class="start-screen">
+      <div class="loader"></div>
+    </div>
+    <div class="end-screen">
+      <h2>Amazing!</h2>
+      <h3>Time: <span></span></h3>
+      <button onclick="onRestart()">restart</button>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
